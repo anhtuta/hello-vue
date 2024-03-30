@@ -1,9 +1,18 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import WithoutScriptSetup from './components/essentials/WithoutScriptSetup.vue'
+import ReactivityFundamentals from './components/essentials/ReactivityFundamentals.vue'
+import ComputedProperties from './components/essentials/ComputedProperties.vue'
+import ClassAndStyleBindings from './components/essentials/ClassAndStyleBindings.vue'
 </script>
 
 <template>
+  <WithoutScriptSetup />
+  <ReactivityFundamentals />
+  <ComputedProperties />
+  <ClassAndStyleBindings />
+
   <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
