@@ -5,6 +5,9 @@ import WithoutScriptSetup from './components/essentials/WithoutScriptSetup.vue'
 import ReactivityFundamentals from './components/essentials/ReactivityFundamentals.vue'
 import ComputedProperties from './components/essentials/ComputedProperties.vue'
 import ClassAndStyleBindings from './components/essentials/ClassAndStyleBindings.vue'
+import ListRendering from './components/essentials/ListRendering.vue'
+import EventHandling from './components/essentials/EventHandling.vue'
+import FormInputBindings from './components/essentials/FormInputBindings.vue'
 </script>
 
 <template>
@@ -12,6 +15,11 @@ import ClassAndStyleBindings from './components/essentials/ClassAndStyleBindings
   <ReactivityFundamentals />
   <ComputedProperties />
   <ClassAndStyleBindings />
+  <ListRendering />
+  <EventHandling />
+  <FormInputBindings />
+
+  <hr />
 
   <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />

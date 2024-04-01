@@ -50,7 +50,7 @@ const errorClass = ref('text-danger')
 }
 
 .active {
-    background-color: lightgreen;
+    background-color: #40b883;
 }
 
 .text-danger {
