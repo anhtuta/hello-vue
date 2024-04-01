@@ -8,6 +8,7 @@ import ClassAndStyleBindings from './components/essentials/ClassAndStyleBindings
 import ListRendering from './components/essentials/ListRendering.vue'
 import EventHandling from './components/essentials/EventHandling.vue'
 import FormInputBindings from './components/essentials/FormInputBindings.vue'
+import ComponentsBasics from './components/essentials/ComponentsBasics.vue'
 </script>
 
 <template>
@@ -18,6 +19,7 @@ import FormInputBindings from './components/essentials/FormInputBindings.vue'
   <ListRendering />
   <EventHandling />
   <FormInputBindings />
+  <ComponentsBasics />
 
   <hr />
 
