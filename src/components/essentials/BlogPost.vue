@@ -6,7 +6,7 @@ defineProps({
         default: 'Anonymous'
     }
 })
-const emit = defineEmits(['shrink-text'])
+const emit = defineEmits(['enlarge-text', 'shrink-text'])
 </script>
 
 <template>
