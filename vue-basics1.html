@@ -53,6 +53,9 @@
       <a href="https://www.w3schools.com/vue/"
         >https://www.w3schools.com/vue/</a
       >
+      <a href="https://codepen.io/vuejs-examples/pen/WNYbaqo"
+        >https://codepen.io/vuejs-examples/pen/WNYbaqo</a
+      >
     </p>
 
     <div id="app">
@@ -107,8 +110,12 @@
       </div>
     </div>
 
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script>
+    <script type="module">
+      import {
+        createApp,
+        ref,
+      } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
+
       const BASE_URL = "https://www.w3schools.com/vue/";
 
       function sleep(ms) {
@@ -118,36 +125,53 @@
         }
       }
 
-      const app = Vue.createApp({
-        data() {
-          // Before this sleeping, all HTML elements above are rendered, Vue is NOT used yet
-          sleep(1000);
+      // Note: Cách viết khác:
+      // Cách 1: Tạo 1 biến json MyComponent = {...}, sau đó dùng: const app = createApp(MyComponent);
+      // (Dấu ... ở đây giống như nội dung bên trong hàm createApp() ở dưới)
+      // Cách 2: Tạo 1 file MyComponent.js. Trong file này sẽ có đoạn:
+      // export default {...} (giống như file WithoutScriptSetup.vue)
+      // sau đó import ở đây và dùng như cách 1
+      const app = createApp({
+        setup() {
+          const typewriterCount = ref(-30);
+          const showDiv = ref(false);
+          const manyFoods = ref([
+            { name: "Burrito", url: BASE_URL + "img_burrito.svg" },
+            { name: "Salad", url: BASE_URL + "img_salad.svg" },
+            { name: "Cake", url: BASE_URL + "img_cake.svg" },
+            { name: "Soup", url: BASE_URL + "img_soup.svg" },
+            { name: "Fish", url: BASE_URL + "img_fish.svg" },
+            { name: "Pizza", url: BASE_URL + "img_pizza.svg" },
+            { name: "Rice", url: BASE_URL + "img_rice.svg" },
+          ]);
+          const clickedFood = ref("");
+          const rawHtml = ref(
+            '<span style="color: red">This should be red.</span>'
+          );
+          const directiveUrl = ref(
+            "https://vuejs.org/assets/directive.DtZKvoAo.png"
+          );
 
-          return {
-            typewriterCount: -30,
-            showDiv: false,
-            manyFoods: [
-              { name: "Burrito", url: BASE_URL + "img_burrito.svg" },
-              { name: "Salad", url: BASE_URL + "img_salad.svg" },
-              { name: "Cake", url: BASE_URL + "img_cake.svg" },
-              { name: "Soup", url: BASE_URL + "img_soup.svg" },
-              { name: "Fish", url: BASE_URL + "img_fish.svg" },
-              { name: "Pizza", url: BASE_URL + "img_pizza.svg" },
-              { name: "Rice", url: BASE_URL + "img_rice.svg" },
-            ],
-            clickedFood: "",
-            rawHtml: '<span style="color: red">This should be red.</span>',
-            directiveUrl: "https://vuejs.org/assets/directive.DtZKvoAo.png",
-          };
-        },
-        methods: {
-          onFoodClick(e) {
+          function onFoodClick(e) {
             // console.log("target", e.target); // this is the img tag above
             console.log("You clicked to " + e.target.alt);
 
             // We need to write this. as prefix to refer to a data property from inside a method
             this.clickedFood = e.target.alt;
-          },
+          }
+
+          // Before this sleeping, all HTML elements above are rendered, Vue is NOT used yet
+          sleep(1000);
+
+          return {
+            typewriterCount,
+            showDiv,
+            manyFoods,
+            clickedFood,
+            rawHtml,
+            directiveUrl,
+            onFoodClick,
+          };
         },
       });
       app.mount("#app");
