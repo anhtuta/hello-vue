@@ -1,6 +1,8 @@
 <!-- Manually exposing state and methods via setup() can be verbose.
     Luckily, it can be avoided when using Single-File Components (SFCs).
     We can simplify the usage with <script setup> -->
+<!-- Note: Vue3 có 2 API Style là Options API and Composition API. Mọi component trong project này
+    sẽ dùng style Composition API. Hơn nữa sẽ đều dùng script setup thay vì dùng method setup() -->
 <script setup>
 import { ref, nextTick, reactive } from 'vue'
 
