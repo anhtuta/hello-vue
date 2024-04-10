@@ -1,4 +1,5 @@
 <script>
+// Ref: https://vuejs.org/guide/essentials/reactivity-fundamentals
 import { ref } from 'vue'
 
 export default {
