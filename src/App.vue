@@ -12,6 +12,7 @@ import FormInputBindings from './components/essentials/FormInputBindings.vue'
 import ComponentsBasics from './components/essentials/ComponentsBasics.vue'
 import Watchers from './components/essentials/Watchers.vue'
 import TemplateRefs from './components/essentials/TemplateRefs.vue'
+import Composables from './components/reusability/Composables.vue'
 </script>
 
 <template>
@@ -35,6 +36,8 @@ import TemplateRefs from './components/essentials/TemplateRefs.vue'
   <Watchers />
   <hr />
   <TemplateRefs />
+  <hr />
+  <Composables />
 
   <hr />
 
