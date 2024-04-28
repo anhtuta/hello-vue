@@ -13,6 +13,7 @@ import ComponentsBasics from './components/essentials/ComponentsBasics.vue'
 import Watchers from './components/essentials/Watchers.vue'
 import TemplateRefs from './components/essentials/TemplateRefs.vue'
 import Composables from './components/reusability/Composables.vue'
+import CustomDirectives from './components/reusability/CustomDirectives.vue'
 </script>
 
 <template>
@@ -38,6 +39,8 @@ import Composables from './components/reusability/Composables.vue'
   <TemplateRefs />
   <hr />
   <Composables />
+  <hr />
+  <CustomDirectives />
 
   <hr />
 

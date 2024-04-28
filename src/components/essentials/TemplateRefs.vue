@@ -6,7 +6,8 @@ import { ref, onMounted, watchEffect } from 'vue'
 const inputRefDemo = ref(null)
 
 onMounted(() => {
-    inputRefDemo.value.focus()
+    // Uncomment to test focus
+    // inputRefDemo.value.focus()
 })
 
 // Note that you can only access the ref after the component is mounted. If you try to access input
@@ -16,7 +17,8 @@ onMounted(() => {
 // where the ref has null value
 watchEffect(() => {
     if (inputRefDemo.value) {
-        inputRefDemo.value.focus()
+        // Uncomment to test focus
+        // inputRefDemo.value.focus()
     } else {
         // not mounted yet, or the element was unmounted (e.g. by v-if)
     }
