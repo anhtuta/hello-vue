@@ -14,9 +14,12 @@ import Watchers from './components/essentials/Watchers.vue'
 import TemplateRefs from './components/essentials/TemplateRefs.vue'
 import Composables from './components/reusability/Composables.vue'
 import CustomDirectives from './components/reusability/CustomDirectives.vue'
+import Slots from './components/components-in-depth/Slots.vue'
 </script>
 
 <template>
+  <h1>Essentials</h1>
+
   <WithoutScriptSetup />
   <WithScriptSetup />
   <hr />
@@ -41,7 +44,10 @@ import CustomDirectives from './components/reusability/CustomDirectives.vue'
   <Composables />
   <hr />
   <CustomDirectives />
+  <hr />
 
+  <h1>Components In-Depth</h1>
+  <Slots />
   <hr />
 
   <header>
