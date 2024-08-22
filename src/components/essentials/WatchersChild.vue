@@ -11,7 +11,8 @@ watch(
     () => props.message,
     (newMessage, oldMessage) => {
         console.log(`Message changed from ${oldMessage} to ${newMessage}`);
-    }
+    },
+    { immediate: true }
 );
 </script>
 

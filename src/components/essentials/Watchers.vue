@@ -168,7 +168,8 @@ const message = ref('Hello from parent');
     <h2>Watchers Child</h2>
     <p>
         Có vẻ như nếu component child watch prop từ parent truyền vào, thì callback sẽ không được thực thi ở lần render đầu
-        tiên, mà chỉ được thực thi khi prop thay đổi.
+        tiên, mà chỉ được thực thi khi prop thay đổi. Nếu muốn nó thực thi ngay trong lần render đầu tiên, thì dùng option
+        immediate: true (xem bên WatchersChild.vue)
     </p>
     <input v-model="message" />
     <WatchersChild :message="message" />
