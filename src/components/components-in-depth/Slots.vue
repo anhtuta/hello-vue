@@ -9,6 +9,7 @@ import FancyButton3 from './FancyButton3.vue'
 
     <h2>Slot Content and Outlet</h2>
     <FancyButton1>
+        <!-- Tất cả content bên trong thẻ FancyButton1 sẽ được inject vào thẻ slot của component FancyButton1 -->
         <h2 style="color: purple">Click me!</h2>
     </FancyButton1>
     <FancyButton1>
@@ -16,10 +17,11 @@ import FancyButton3 from './FancyButton3.vue'
     </FancyButton1>
 
     <h2>Fallback content</h2>
+    <!-- Thẻ FancyButton1 không có content, do đó content của slot của FancyButton2 sẽ = giá trị fallback do nó tự define -->
     <FancyButton2 />
 
     <h2>Named Slots</h2>
-    <div>v-slot:slotName could be used in shorthand as #slotName</div>
+    <div>Note: v-slot:slotName could be used in shorthand as #slotName</div>
 
     <FancyButton3 />
 

@@ -15,6 +15,7 @@ import TemplateRefs from './components/essentials/TemplateRefs.vue'
 import Composables from './components/reusability/Composables.vue'
 import CustomDirectives from './components/reusability/CustomDirectives.vue'
 import Slots from './components/components-in-depth/Slots.vue'
+import Events from './components/components-in-depth/Events.vue'
 </script>
 
 <template>
@@ -48,6 +49,8 @@ import Slots from './components/components-in-depth/Slots.vue'
 
   <h1>Components In-Depth</h1>
   <Slots />
+  <hr />
+  <Events />
   <hr />
 
   <header>
