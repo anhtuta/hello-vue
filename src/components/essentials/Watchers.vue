@@ -1,5 +1,6 @@
 <script setup>
 import { ref, reactive, watch, watchEffect } from 'vue'
+import WatchersChild from './WatchersChild.vue'
 
 const question = ref('')
 const answer = ref('Questions usually contain a question mark. ;-)')
@@ -134,6 +135,8 @@ watchEffect(async () => {
 // To stop watching, call the function returned by watch():
 // const stop = watch(source, callback)
 // stop()
+
+const message = ref('Hello from parent');
 </script>
 
 <template>
@@ -161,4 +164,12 @@ watchEffect(async () => {
         <button @click="todoId++">Fetch todo with ID {{ todoId }}</button>
     </p>
     <pre>{{ data }}</pre>
+
+    <h2>Watchers Child</h2>
+    <p>
+        Có vẻ như nếu component child watch prop từ parent truyền vào, thì callback sẽ không được thực thi ở lần render đầu
+        tiên, mà chỉ được thực thi khi prop thay đổi.
+    </p>
+    <input v-model="message" />
+    <WatchersChild :message="message" />
 </template>
