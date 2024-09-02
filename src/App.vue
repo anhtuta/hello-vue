@@ -13,6 +13,7 @@ import ComponentsBasics from './components/essentials/ComponentsBasics.vue'
 import Watchers from './components/essentials/Watchers.vue'
 import TemplateRefs from './components/essentials/TemplateRefs.vue'
 import Composables from './components/reusability/Composables.vue'
+import WriteComposableStepByStep from './components/reusability/WriteComposableStepByStep.vue'
 import CustomDirectives from './components/reusability/CustomDirectives.vue'
 import Slots from './components/components-in-depth/Slots.vue'
 import Events from './components/components-in-depth/Events.vue'
@@ -43,6 +44,8 @@ import Events from './components/components-in-depth/Events.vue'
   <TemplateRefs />
   <hr />
   <Composables />
+  <hr />
+  <WriteComposableStepByStep />
   <hr />
   <CustomDirectives />
   <hr />

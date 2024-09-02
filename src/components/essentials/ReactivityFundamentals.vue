@@ -43,6 +43,11 @@ const state = reactive({ count: 0 })
     <h1>Reactivity Fundamentals</h1>
 
     <h2>Declaring Reactive State</h2>
+    <p>
+        Note: when you define a reactive reference using ref, you need to use .value to access its value in the script tag.
+        However, in the template tag, Vue automatically unwraps the .value for you, so you don't need to use .value there
+        (Copilot)
+    </p>
     <button @click="count++">
         Increase count: {{ count }}
     </button>
