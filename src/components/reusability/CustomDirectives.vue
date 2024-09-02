@@ -1,4 +1,6 @@
 <script setup>
+import { ref } from 'vue';
+
 // enables v-focus in templates
 const vFocus = {
     mounted: (el) => el.focus()
@@ -12,6 +14,8 @@ const vFocus = {
 //     }
 //   }
 // }
+
+const greenColor = ref('green');
 
 const vMyDirective = {
     // called before bound element's attributes
@@ -61,4 +65,5 @@ const vMyDirective = {
     <div v-my-directive v-liliana>Custom directive hooks</div>
 
     <h2 v-color="green">Function Shorthand. Why this does NOT work???</h2>
+    <h2 v-color="greenColor">Updated: for this to work, the value inside v-color MUST be a reactive data</h2>
 </template>
