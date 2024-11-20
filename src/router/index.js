@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import HomeView from "@/views/HomeView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -11,18 +11,23 @@ const router = createRouter({
     },
     {
       path: "/essentials",
-      name: "Essentials",
+      name: "essentials",
       component: () => import("../views/EssentialsView.vue"),
     },
     {
       path: "/Components-in-depth",
-      name: "Components In-Depth",
+      name: "Components-in-depth",
       component: () => import("../views/ComponentsInDepthView.vue"),
     },
     {
       path: "/reusability",
-      name: "Reusability",
+      name: "reusability",
       component: () => import("../views/ReusabilityView.vue"),
+    },
+    {
+      path: "/hello-pinia",
+      name: "hello-pinia",
+      component: () => import("../views/HelloPiniaView.vue"),
     },
     {
       path: "/about",
