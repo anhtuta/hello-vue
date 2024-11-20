@@ -59,7 +59,8 @@ const vMyDirective = {
         In addition to the default set of directives shipped in core (like v-model or v-show), Vue also allows you to
         register your own custom directives
     </p>
-    <input v-focus placeholder="This should be focused when render" />
+    <!-- <input v-focus placeholder="This should be focused when render" style="width: 100%;" /> -->
+    <input placeholder="This should be focused when render if add v-focus props" style="width: 100%;" />
 
     <h2>Directive Hooks</h2>
     <div v-my-directive v-liliana>Custom directive hooks</div>

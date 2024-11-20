@@ -2,6 +2,9 @@
   <div class="app">
     <nav>
       <RouterLink to="/">Home</RouterLink> |
+      <RouterLink to="/essentials">Essentials</RouterLink> |
+      <RouterLink to="/components-in-depth">Components In-Depth</RouterLink> |
+      <RouterLink to="/reusability">Reusability</RouterLink> |
       <RouterLink to="/about">About</RouterLink>
     </nav>
     <RouterView />
