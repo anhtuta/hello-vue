@@ -1,6 +1,18 @@
 import { ref, computed } from "vue";
 import { defineStore } from "pinia";
 
+// Note: there're two ways to define a store:
+// 1. Option Stores: defineStore("storeName", () => { ... })
+// 2. Setup Stores: defineStore("storeName", { state: () => { ... }, getters: { ... }, actions: { ... } })
+// What syntax should I pick?
+// As with Vue's Composition API and Options API, pick the one that you feel the most comfortable with.
+// Both have their strengths and weaknesses. Options stores are easier to work with while Setup stores
+// are more flexible and powerful.
+// This example uses the Setup Stores approach
+// In Setup Stores:
+// - ref()s become state properties
+// - computed()s become getters
+// - function()s become actions
 export const useCounterStore = defineStore("counter", () => {
   //===== state =====//
   const count = ref(0);
